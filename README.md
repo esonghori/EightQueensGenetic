@@ -1,2 +1,2 @@
-# EightQueensGenetic
-Solve Eight Queens with Simple Genetic Algorithm.
+# NQueensGenetic
+Solve N Queens with Simple Genetic Algorithm.
