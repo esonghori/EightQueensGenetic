@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EightQueensGenetic {
-    interface Gene {
+    interface IGene : ICloneable {
         int Fitness();
-        Gene Mate(Gene other);
-        Gene Mutate();
+        IGene Mate(IGene other);
+        IGene Mutate();
+        void Randomize();
     }
 }
