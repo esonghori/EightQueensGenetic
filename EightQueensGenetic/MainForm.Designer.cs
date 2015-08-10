@@ -1,4 +1,4 @@
-﻿namespace EightQueensGenetic
+﻿namespace NQueensGenetic
 {
     partial class MainForm
     {
@@ -28,41 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BoardPicBox = new System.Windows.Forms.PictureBox();
             this.StartStopBtn = new System.Windows.Forms.Button();
             this.fitnessLabel = new System.Windows.Forms.Label();
             this.fitnessTextBox = new System.Windows.Forms.TextBox();
-            this.stepBtn = new System.Windows.Forms.Button();
-            this.fitnessCurvePicBox = new System.Windows.Forms.PictureBox();
+            this.sizeLabel = new System.Windows.Forms.Label();
+            this.sizeNumUpDown = new System.Windows.Forms.NumericUpDown();
+            this.BoardPicBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timeTextBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoardPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fitnessCurvePicBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BoardPicBox
-            // 
-            this.BoardPicBox.ErrorImage = null;
-            this.BoardPicBox.Image = global::EightQueensGenetic.Properties.Resources.chessboard;
-            this.BoardPicBox.Location = new System.Drawing.Point(12, 12);
-            this.BoardPicBox.Name = "BoardPicBox";
-            this.BoardPicBox.Size = new System.Drawing.Size(400, 400);
-            this.BoardPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BoardPicBox.TabIndex = 0;
-            this.BoardPicBox.TabStop = false;
             // 
             // StartStopBtn
             // 
-            this.StartStopBtn.Location = new System.Drawing.Point(62, 419);
+            this.StartStopBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.StartStopBtn.Location = new System.Drawing.Point(12, 630);
             this.StartStopBtn.Name = "StartStopBtn";
             this.StartStopBtn.Size = new System.Drawing.Size(75, 23);
-            this.StartStopBtn.TabIndex = 1;
+            this.StartStopBtn.TabIndex = 0;
             this.StartStopBtn.Text = "Start";
             this.StartStopBtn.UseVisualStyleBackColor = true;
             this.StartStopBtn.Click += new System.EventHandler(this.StartStopBtn_Click);
             // 
             // fitnessLabel
             // 
+            this.fitnessLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.fitnessLabel.AutoSize = true;
-            this.fitnessLabel.Location = new System.Drawing.Point(418, 12);
+            this.fitnessLabel.Location = new System.Drawing.Point(308, 636);
             this.fitnessLabel.Name = "fitnessLabel";
             this.fitnessLabel.Size = new System.Drawing.Size(43, 13);
             this.fitnessLabel.TabIndex = 2;
@@ -70,45 +63,82 @@
             // 
             // fitnessTextBox
             // 
-            this.fitnessTextBox.Location = new System.Drawing.Point(467, 10);
+            this.fitnessTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.fitnessTextBox.Location = new System.Drawing.Point(357, 633);
             this.fitnessTextBox.Name = "fitnessTextBox";
             this.fitnessTextBox.ReadOnly = true;
-            this.fitnessTextBox.Size = new System.Drawing.Size(41, 20);
+            this.fitnessTextBox.Size = new System.Drawing.Size(52, 20);
             this.fitnessTextBox.TabIndex = 3;
             // 
-            // stepBtn
+            // sizeLabel
             // 
-            this.stepBtn.Location = new System.Drawing.Point(143, 419);
-            this.stepBtn.Name = "stepBtn";
-            this.stepBtn.Size = new System.Drawing.Size(75, 23);
-            this.stepBtn.TabIndex = 4;
-            this.stepBtn.Text = "Step";
-            this.stepBtn.UseVisualStyleBackColor = true;
-            this.stepBtn.Click += new System.EventHandler(this.stepBtn_Click);
+            this.sizeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.sizeLabel.AutoSize = true;
+            this.sizeLabel.Location = new System.Drawing.Point(137, 636);
+            this.sizeLabel.Name = "sizeLabel";
+            this.sizeLabel.Size = new System.Drawing.Size(30, 13);
+            this.sizeLabel.TabIndex = 5;
+            this.sizeLabel.Text = "Size:";
             // 
-            // fitnessCurvePicBox
+            // sizeNumUpDown
             // 
-            this.fitnessCurvePicBox.Location = new System.Drawing.Point(421, 36);
-            this.fitnessCurvePicBox.Name = "fitnessCurvePicBox";
-            this.fitnessCurvePicBox.Size = new System.Drawing.Size(200, 200);
-            this.fitnessCurvePicBox.TabIndex = 5;
-            this.fitnessCurvePicBox.TabStop = false;
+            this.sizeNumUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.sizeNumUpDown.Location = new System.Drawing.Point(173, 633);
+            this.sizeNumUpDown.Name = "sizeNumUpDown";
+            this.sizeNumUpDown.Size = new System.Drawing.Size(58, 20);
+            this.sizeNumUpDown.TabIndex = 7;
+            this.sizeNumUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            // 
+            // BoardPicBox
+            // 
+            this.BoardPicBox.ErrorImage = null;
+            this.BoardPicBox.Location = new System.Drawing.Point(10, 10);
+            this.BoardPicBox.Name = "BoardPicBox";
+            this.BoardPicBox.Size = new System.Drawing.Size(600, 600);
+            this.BoardPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BoardPicBox.TabIndex = 0;
+            this.BoardPicBox.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(453, 636);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Time (s):";
+            // 
+            // timeTextBox
+            // 
+            this.timeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.timeTextBox.Location = new System.Drawing.Point(506, 633);
+            this.timeTextBox.Name = "timeTextBox";
+            this.timeTextBox.ReadOnly = true;
+            this.timeTextBox.Size = new System.Drawing.Size(52, 20);
+            this.timeTextBox.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 449);
-            this.Controls.Add(this.fitnessCurvePicBox);
-            this.Controls.Add(this.stepBtn);
+            this.ClientSize = new System.Drawing.Size(624, 661);
+            this.Controls.Add(this.sizeNumUpDown);
+            this.Controls.Add(this.sizeLabel);
+            this.Controls.Add(this.timeTextBox);
             this.Controls.Add(this.fitnessTextBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.fitnessLabel);
             this.Controls.Add(this.StartStopBtn);
             this.Controls.Add(this.BoardPicBox);
             this.Name = "MainForm";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.sizeNumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoardPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fitnessCurvePicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,8 +150,10 @@
         private System.Windows.Forms.Button StartStopBtn;
         private System.Windows.Forms.Label fitnessLabel;
         private System.Windows.Forms.TextBox fitnessTextBox;
-        private System.Windows.Forms.Button stepBtn;
-        private System.Windows.Forms.PictureBox fitnessCurvePicBox;
+        private System.Windows.Forms.Label sizeLabel;
+        private System.Windows.Forms.NumericUpDown sizeNumUpDown;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox timeTextBox;
     }
 }
 

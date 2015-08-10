@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EightQueensGenetic {
+namespace NQueensGenetic {
     interface IGene : ICloneable {
         int Fitness();
         IGene Mate(IGene other);

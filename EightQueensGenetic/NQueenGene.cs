@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EightQueensGenetic {
-    class EightQueenGene : IGene {
+namespace NQueensGenetic {
+    class NQueenGene : IGene {
         static private Random rnd_ = new Random();
 
         private int[] queen_location_;
@@ -16,7 +16,7 @@ namespace EightQueensGenetic {
             }
         }
 
-        public EightQueenGene(int size) {
+        public NQueenGene(int size) {
             queen_location_ = new int[size];
             for (int i = 0; i < queen_location_.Length; i++) {
                 queen_location_[i] = rnd_.Next(queen_location_.Length) + 1;
@@ -43,7 +43,7 @@ namespace EightQueensGenetic {
             return this;
         }
         public IGene Mate(IGene other) {
-            EightQueenGene ret = other.Clone() as EightQueenGene;
+            NQueenGene ret = other.Clone() as NQueenGene;
             for (int i = 0; i < ret.queen_location_.Length / 2; i++) {
                 ret.queen_location_[i] = queen_location_[i];
             }
@@ -56,7 +56,7 @@ namespace EightQueensGenetic {
         }
 
         public object Clone() {
-            EightQueenGene ret = new EightQueenGene(this.QueenLocation.Length);
+            NQueenGene ret = new NQueenGene(this.QueenLocation.Length);
             for (int i = 0; i < queen_location_.Length; i++) {
                 ret.queen_location_[i] = queen_location_[i];
             }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EightQueensGenetic {
+namespace NQueensGenetic {
     class GeneticAlgorithm {
         private List<IGene> genes_;
         private double mating_ratio_ = 0.5;
