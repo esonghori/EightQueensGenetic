@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NQueensGenetic", "EightQueensGenetic\NQueensGenetic.csproj", "{92BCF067-48BE-4447-BBC5-967DCDDF97CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NQueensGenetic", "NQueensGenetic\NQueensGenetic.csproj", "{92BCF067-48BE-4447-BBC5-967DCDDF97CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
